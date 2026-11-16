@@ -1,0 +1,698 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>全台表演週曆 11/16–11/22</title>
+  <meta name="description" content="本週 54 場。必看：BTS〈ARIRANG〉高雄站、第63屆金馬獎、BABYMONSTER〈CHOOM〉、倫敦原版音樂劇《史瑞克》、《女巫安息日》。">
+  <link rel="canonical" href="https://noodleohya.github.io/perf-calendar/">
+  <meta property="og:title" content="全台表演週曆 11/16–11/22">
+  <meta property="og:description" content="本週 54 場。必看：BTS〈ARIRANG〉高雄站、第63屆金馬獎、BABYMONSTER〈CHOOM〉、倫敦原版音樂劇《史瑞克》、《女巫安息日》。">
+  <meta property="og:image" content="https://noodleohya.github.io/perf-calendar/og-cover.png?v=20261116">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:type" content="image/png">
+  <meta property="og:url" content="https://noodleohya.github.io/perf-calendar/">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="zh_TW">
+  <meta property="og:site_name" content="全台表演週曆">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="全台表演週曆 11/16–11/22">
+  <meta name="twitter:description" content="本週 54 場。必看：BTS〈ARIRANG〉高雄站、第63屆金馬獎、BABYMONSTER〈CHOOM〉、倫敦原版音樂劇《史瑞克》、《女巫安息日》。">
+  <meta name="twitter:image" content="https://noodleohya.github.io/perf-calendar/og-cover.png?v=20261116">
+  <meta name="theme-color" content="#111111">
+  <style>
+    :root {
+      --black: #111111;
+      --yellow: #FFD400;
+      --bg: #f4f1ea;
+      --ink: #111111;
+      --muted: #5a5a5a;
+      --line: #111111;
+      --radius: 12px;
+    }
+    * { box-sizing: border-box; }
+    html, body { margin: 0; padding: 0; }
+    body {
+      font-family: "PingFang TC", "Noto Sans TC", "Source Han Sans TC", "Noto Sans CJK TC", "Microsoft JhengHei", sans-serif;
+      background: var(--bg);
+      color: var(--ink);
+      line-height: 1.5;
+      -webkit-text-size-adjust: 100%;
+    }
+    a { color: inherit; }
+    .hero {
+      background: var(--black);
+      color: var(--yellow);
+      overflow: hidden;
+    }
+    .hero-stripe {
+      height: 12px;
+      background: repeating-linear-gradient(135deg, #FFD400 0 12px, #111111 12px 24px);
+    }
+    .hero-inner {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 28px 20px 24px;
+    }
+    .eyebrow {
+      font-size: 12px;
+      letter-spacing: 0.16em;
+      line-height: 1.6;
+    }
+    .hero-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 16px;
+      align-items: flex-end;
+      justify-content: space-between;
+      margin-top: 16px;
+    }
+    .hero h1 {
+      margin: 0;
+      font-size: clamp(32px, 8vw, 64px);
+      font-weight: 650;
+      line-height: 1.08;
+      letter-spacing: -0.04em;
+    }
+    .week {
+      margin-top: 16px;
+      font-size: 18px;
+    }
+    .hero-count {
+      flex: 0 1 180px;
+      border-top: 1px solid var(--yellow);
+      padding-top: 12px;
+    }
+    .hero-count .num {
+      font-size: 64px;
+      line-height: 1;
+      font-weight: 650;
+    }
+    .hero-count .unit {
+      font-size: 16px;
+      margin-left: 8px;
+    }
+    .hero-count .sub {
+      font-size: 13px;
+      margin-top: 10px;
+      line-height: 1.6;
+    }
+    .hero-regions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px 20px;
+      margin-top: 24px;
+      padding-top: 14px;
+      border-top: 1px solid var(--yellow);
+      font-size: 13px;
+    }
+    main {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 8px 20px 64px;
+    }
+    h2 {
+      font-size: 22px;
+      font-weight: 650;
+      margin: 36px 0 16px;
+    }
+    .hl-wrap {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+    }
+    .hl {
+      flex: 1 1 280px;
+      max-width: 100%;
+      min-width: 0;
+      display: flex;
+      flex-direction: column;
+      padding: 24px;
+      border-radius: var(--radius);
+      text-decoration: none;
+      border: 1px solid var(--black);
+      overflow-wrap: anywhere;
+    }
+    .hl.dark { background: var(--black); color: var(--yellow); }
+    .hl.light { background: var(--yellow); color: var(--black); }
+    .hl-top {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      font-size: 13px;
+      gap: 12px;
+    }
+    .hl-num { font-size: 34px; line-height: 1; font-weight: 650; }
+    .hl-title { margin-top: 28px; font-size: 22px; line-height: 1.35; font-weight: 650; }
+    .hl-venue { margin-top: 12px; font-size: 14px; line-height: 1.6; }
+    .hl-why { margin-top: 8px; margin-bottom: 24px; font-size: 14px; line-height: 1.7; }
+    .hl-go, .card-go {
+      margin-top: auto;
+      padding-top: 14px;
+      border-top: 1px solid currentColor;
+      font-size: 14px;
+      font-weight: 650;
+    }
+    .filters {
+      position: sticky;
+      top: 0;
+      z-index: 5;
+      background: color-mix(in srgb, var(--bg) 92%, transparent);
+      backdrop-filter: blur(10px);
+      margin: 0 -20px;
+      padding: 12px 20px 10px;
+      border-bottom: 1px solid color-mix(in srgb, var(--black) 12%, transparent);
+    }
+    .filter-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-bottom: 8px;
+    }
+    .filter-row:last-child { margin-bottom: 0; }
+    .filter-label {
+      font-size: 12px;
+      color: var(--muted);
+      width: 100%;
+      letter-spacing: 0.04em;
+    }
+    .pill {
+      appearance: none;
+      border: 1px solid var(--black);
+      background: transparent;
+      color: var(--black);
+      border-radius: 999px;
+      padding: 6px 12px;
+      font: inherit;
+      font-size: 13px;
+      font-weight: 600;
+      cursor: pointer;
+      line-height: 1.3;
+    }
+    .pill .n {
+      font-weight: 500;
+      opacity: 0.7;
+      margin-left: 2px;
+    }
+    .pill.is-on {
+      background: var(--black);
+      color: var(--yellow);
+    }
+    .empty {
+      display: none;
+      margin: 28px 0;
+      padding: 28px 20px;
+      border: 1px dashed color-mix(in srgb, var(--black) 30%, transparent);
+      border-radius: var(--radius);
+      color: var(--muted);
+      text-align: center;
+    }
+    .empty.show { display: block; }
+    .day { margin-top: 30px; }
+    .day.is-hidden { display: none; }
+    .day-head {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: baseline;
+      justify-content: space-between;
+      gap: 8px;
+      border-bottom: 2px solid var(--black);
+      padding-bottom: 12px;
+      margin-bottom: 12px;
+    }
+    .day-head h3 { margin: 0; font-size: 24px; font-weight: 650; }
+    .day-count { font-size: 13px; color: var(--muted); }
+    .grid {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+    }
+    .card {
+      flex: 1 1 280px;
+      max-width: 100%;
+      min-width: 0;
+      padding: 20px;
+      border-radius: 10px;
+      display: flex;
+      flex-direction: column;
+      text-decoration: none;
+      border: 1px solid var(--black);
+      overflow-wrap: anywhere;
+    }
+    .card.is-hidden { display: none; }
+    .card.dark {
+      background: var(--black);
+      color: var(--yellow);
+      border-top: 5px solid var(--yellow);
+    }
+    .card.light {
+      background: var(--yellow);
+      color: var(--black);
+      border-top: 5px solid var(--black);
+    }
+    .card-meta {
+      display: flex;
+      justify-content: space-between;
+      gap: 8px;
+      font-size: 12px;
+      line-height: 1.6;
+    }
+    .card-title {
+      font-size: 20px;
+      line-height: 1.45;
+      font-weight: 650;
+      margin: 18px 0;
+    }
+    .card-info { font-size: 14px; line-height: 1.7; margin-top: auto; }
+    .card-venue { margin-top: 4px; }
+    .notes {
+      margin-top: 40px;
+      padding-top: 8px;
+      color: var(--muted);
+      font-size: 14px;
+      line-height: 1.8;
+    }
+    .notes p { margin: 0 0 10px; }
+    @media (max-width: 640px) {
+      .hero-inner, main { padding-left: 16px; padding-right: 16px; }
+      .filters { margin-left: -16px; margin-right: -16px; padding-left: 16px; padding-right: 16px; }
+      .hero-count .num { font-size: 48px; }
+      .hl, .card { flex-basis: 100%; }
+    }
+  </style>
+</head>
+<body>
+  <header class="hero">
+    <div class="hero-stripe" aria-hidden="true"></div>
+    <div class="hero-inner">
+      <div class="eyebrow">TAIWAN / WEEKLY PERFORMANCE GUIDE</div>
+      <div class="hero-row">
+        <div>
+          <h1>全台表演<br>一週現場。</h1>
+          <div class="week">11/16（一）– 11/22（日）</div>
+        </div>
+        <div class="hero-count">
+          <div><span class="num">54</span><span class="unit">場次日</span></div>
+          <div class="sub">演唱會・音樂節・劇場・舞蹈・古典</div>
+        </div>
+      </div>
+      <div class="hero-regions">
+        <span>北部 28</span><span>中部 8</span><span>南部 16</span><span>東部 2</span>
+      </div>
+    </div>
+  </header>
+  <main>
+    <h2>本週必看</h2>
+    <div class="hl-wrap">
+      <a class="hl dark" href="https://tixcraft.com/activity/detail/26_btskns" target="_blank" rel="noopener noreferrer">
+  <div class="hl-top"><span class="hl-num">01</span><span class="hl-when">11/19、21、22</span></div>
+  <div class="hl-title">BTS &#x27;ARIRANG&#x27; 高雄站</div>
+  <div class="hl-venue">高雄國家體育場（世運主場館）</div>
+  <div class="hl-why">體育場三場，看大型巡演舞台、LED 與動線規模</div>
+  <div class="hl-go">查看資訊 →</div>
+</a><a class="hl light" href="https://www.goldenhorse.org.tw/awards/ceremony/info/" target="_blank" rel="noopener noreferrer">
+  <div class="hl-top"><span class="hl-num">02</span><span class="hl-when">11/22</span></div>
+  <div class="hl-title">第63屆金馬獎頒獎典禮</div>
+  <div class="hl-venue">臺北流行音樂中心</div>
+  <div class="hl-why">年度最大電視典禮，看轉播級舞台與燈光</div>
+  <div class="hl-go">查看資訊 →</div>
+</a><a class="hl dark" href="https://ticketplus.com.tw/activity/75a694bf61cb28f0e24835916cfae36e" target="_blank" rel="noopener noreferrer">
+  <div class="hl-top"><span class="hl-num">03</span><span class="hl-when">11/21–22</span></div>
+  <div class="hl-title">BABYMONSTER [CHOOM]</div>
+  <div class="hl-venue">臺北小巨蛋</div>
+  <div class="hl-why">舞蹈主打的 K-pop 巡演，看舞台機關與舞群走位</div>
+  <div class="hl-go">查看資訊 →</div>
+</a><a class="hl light" href="https://tpac.org.taipei/program/2051" target="_blank" rel="noopener noreferrer">
+  <div class="hl-top"><span class="hl-num">04</span><span class="hl-when">11/20–22 起</span></div>
+  <div class="hl-title">倫敦全本音樂劇《史瑞克》</div>
+  <div class="hl-venue">北藝中心 大劇院</div>
+  <div class="hl-why">西區巡演版，看換景系統與大型道具</div>
+  <div class="hl-go">查看資訊 →</div>
+</a><a class="hl dark" href="https://www.opentix.life/program/2079395353170546689" target="_blank" rel="noopener noreferrer">
+  <div class="hl-top"><span class="hl-num">05</span><span class="hl-when">11/20–22</span></div>
+  <div class="hl-title">《女巫安息日》</div>
+  <div class="hl-venue">臺中國家歌劇院 中劇院</div>
+  <div class="hl-why">比利時跨界劇場，看空間與身體裝置</div>
+  <div class="hl-go">查看資訊 →</div>
+</a>
+    </div>
+
+    <h2>本週場次</h2>
+    <div class="filters" role="region" aria-label="篩選場次">
+      <div class="filter-row" id="region-filters">
+        <div class="filter-label">地區</div>
+        <button type="button" class="pill is-on" data-filter="region" data-value="全部" aria-pressed="true">全部 <span class="n">54</span></button><button type="button" class="pill" data-filter="region" data-value="北部" aria-pressed="false">北部 <span class="n">28</span></button><button type="button" class="pill" data-filter="region" data-value="中部" aria-pressed="false">中部 <span class="n">8</span></button><button type="button" class="pill" data-filter="region" data-value="南部" aria-pressed="false">南部 <span class="n">16</span></button><button type="button" class="pill" data-filter="region" data-value="東部" aria-pressed="false">東部 <span class="n">2</span></button>
+      </div>
+      <div class="filter-row" id="date-filters">
+        <div class="filter-label">日期</div>
+        <button type="button" class="pill is-on" data-filter="date" data-value="全部" aria-pressed="true">全部日期</button><button type="button" class="pill" data-filter="date" data-value="2026-11-16" aria-pressed="false">11/16 週一 <span class="n">1</span></button><button type="button" class="pill" data-filter="date" data-value="2026-11-17" aria-pressed="false">11/17 週二 <span class="n">1</span></button><button type="button" class="pill" data-filter="date" data-value="2026-11-18" aria-pressed="false">11/18 週三 <span class="n">3</span></button><button type="button" class="pill" data-filter="date" data-value="2026-11-19" aria-pressed="false">11/19 週四 <span class="n">3</span></button><button type="button" class="pill" data-filter="date" data-value="2026-11-20" aria-pressed="false">11/20 週五 <span class="n">7</span></button><button type="button" class="pill" data-filter="date" data-value="2026-11-21" aria-pressed="false">11/21 週六 <span class="n">20</span></button><button type="button" class="pill" data-filter="date" data-value="2026-11-22" aria-pressed="false">11/22 週日 <span class="n">19</span></button>
+      </div>
+    </div>
+    <p class="empty" id="empty">這個篩選組合沒有場次。</p>
+    <section class="day" data-date="2026-11-16">
+  <div class="day-head"><h3>11/16 週一</h3><span class="day-count"><span class="visible-n">1</span> 場次日</span></div>
+  <div class="grid"><a class="card dark" href="https://www.opentix.life/event/2075147936841920513" target="_blank" rel="noopener noreferrer" data-region="中部" data-date="2026-11-16">
+  <div class="card-meta"><span>中部 / 台中</span><span>古典</span></div>
+  <div class="card-title">NTT遇見巨人：賽門．拉圖爵士與巴伐利亞廣播交響樂團</div>
+  <div class="card-info"><div>11/16 週一 · 19:30</div><div class="card-venue">臺中國家歌劇院 大劇院</div></div>
+  <div class="card-go">查看資訊 →</div>
+</a></div>
+</section><section class="day" data-date="2026-11-17">
+  <div class="day-head"><h3>11/17 週二</h3><span class="day-count"><span class="visible-n">1</span> 場次日</span></div>
+  <div class="grid"><a class="card light" href="https://www.opentix.life/program/2076872118440620032" target="_blank" rel="noopener noreferrer" data-region="北部" data-date="2026-11-17">
+  <div class="card-meta"><span>北部 / 台北</span><span>戲曲</span></div>
+  <div class="card-title">于魁智、李勝素與中國戲曲學院名家匯演</div>
+  <div class="card-info"><div>11/17 週二 · 19:00</div><div class="card-venue">國家戲劇院</div></div>
+  <div class="card-go">查看資訊 →</div>
+</a></div>
+</section><section class="day" data-date="2026-11-18">
+  <div class="day-head"><h3>11/18 週三</h3><span class="day-count"><span class="visible-n">3</span> 場次日</span></div>
+  <div class="grid"><a class="card dark" href="https://www.accupass.com/event/2610230834041267265939" target="_blank" rel="noopener noreferrer" data-region="北部" data-date="2026-11-18">
+  <div class="card-meta"><span>北部 / 新竹</span><span>音樂節</span></div>
+  <div class="card-title">念中山國旗電音祭（免費）</div>
+  <div class="card-info"><div>11/18 週三 · 18:30</div><div class="card-venue">新竹縣體育館</div></div>
+  <div class="card-go">查看資訊 →</div>
+</a><a class="card light" href="https://www.opentix.life/program/2076872118440620032" target="_blank" rel="noopener noreferrer" data-region="北部" data-date="2026-11-18">
+  <div class="card-meta"><span>北部 / 台北</span><span>戲曲</span></div>
+  <div class="card-title">于魁智、李勝素與中國戲曲學院名家匯演</div>
+  <div class="card-info"><div>11/18 週三 · 19:00</div><div class="card-venue">國家戲劇院</div></div>
+  <div class="card-go">查看資訊 →</div>
+</a><a class="card dark" href="https://www.npac-ntch.org/programs/27661" target="_blank" rel="noopener noreferrer" data-region="北部" data-date="2026-11-18">
+  <div class="card-meta"><span>北部 / 台北</span><span>古典</span></div>
+  <div class="card-title">力晶藝文饗宴：賽門．拉圖與巴伐利亞廣播交響樂團</div>
+  <div class="card-info"><div>11/18 週三 · 19:30</div><div class="card-venue">國家音樂廳</div></div>
+  <div class="card-go">查看資訊 →</div>
+</a></div>
+</section><section class="day" data-date="2026-11-19">
+  <div class="day-head"><h3>11/19 週四</h3><span class="day-count"><span class="visible-n">3</span> 場次日</span></div>
+  <div class="grid"><a class="card light" href="https://tixcraft.com/activity/detail/26_btskns" target="_blank" rel="noopener noreferrer" data-region="南部" data-date="2026-11-19">
+  <div class="card-meta"><span>南部 / 高雄</span><span>演唱會</span></div>
+  <div class="card-title">BTS WORLD TOUR &#x27;ARIRANG&#x27; 高雄站</div>
+  <div class="card-info"><div>11/19 週四 · 19:00</div><div class="card-venue">高雄國家體育場（世運主場館）</div></div>
+  <div class="card-go">查看資訊 →</div>
+</a><a class="card light" href="https://www.opentix.life/program/2076872118440620032" target="_blank" rel="noopener noreferrer" data-region="北部" data-date="2026-11-19">
+  <div class="card-meta"><span>北部 / 台北</span><span>戲曲</span></div>
+  <div class="card-title">于魁智、李勝素與中國戲曲學院名家匯演</div>
+  <div class="card-info"><div>11/19 週四 · 19:00</div><div class="card-venue">國家戲劇院</div></div>
+  <div class="card-go">查看資訊 →</div>
+</a><a class="card dark" href="https://www.npac-ntch.org/programs/27661" target="_blank" rel="noopener noreferrer" data-region="北部" data-date="2026-11-19">
+  <div class="card-meta"><span>北部 / 台北</span><span>古典</span></div>
+  <div class="card-title">力晶藝文饗宴：賽門．拉圖與巴伐利亞廣播交響樂團</div>
+  <div class="card-info"><div>11/19 週四 · 19:30</div><div class="card-venue">國家音樂廳</div></div>
+  <div class="card-go">查看資訊 →</div>
+</a></div>
+</section><section class="day" data-date="2026-11-20">
+  <div class="day-head"><h3>11/20 週五</h3><span class="day-count"><span class="visible-n">7</span> 場次日</span></div>
+  <div class="grid"><a class="card dark" href="https://kktix.com/events/hokuto2026" target="_blank" rel="noopener noreferrer" data-region="北部" data-date="2026-11-20">
+  <div class="card-meta"><span>北部 / 台北</span><span>演唱會</span></div>
+  <div class="card-title">HOKUTO LIVE&amp;FAN MEETING《JUKE BOX LAND》</div>
+  <div class="card-info"><div>11/20 週五 · 18:30</div><div class="card-venue">Legacy Taipei</div></div>
+  <div class="card-go">查看資訊 →</div>
+</a><a class="card light" href="https://www.opentix.life/program/2076872118440620032" target="_blank" rel="noopener noreferrer" data-region="北部" data-date="2026-11-20">
+  <div class="card-meta"><span>北部 / 台北</span><span>戲曲</span></div>
+  <div class="card-title">于魁智、李勝素與中國戲曲學院名家匯演</div>
+  <div class="card-info"><div>11/20 週五 · 19:00</div><div class="card-venue">國家戲劇院</div></div>
+  <div class="card-go">查看資訊 →</div>
+</a><a class="card dark" href="https://tpac.org.taipei/program/2051" target="_blank" rel="noopener noreferrer" data-region="北部" data-date="2026-11-20">
+  <div class="card-meta"><span>北部 / 台北</span><span>音樂劇</span></div>
+  <div class="card-title">倫敦全本音樂劇《史瑞克》</div>
+  <div class="card-info"><div>11/20 週五 · 19:30</div><div class="card-venue">臺北表演藝術中心 大劇院</div></div>
+  <div class="card-go">查看資訊 →</div>
+</a><a class="card light" href="https://www.opentix.life/program/2085664559789076480" target="_blank" rel="noopener noreferrer" data-region="北部" data-date="2026-11-20">
+  <div class="card-meta"><span>北部 / 台北</span><span>舞蹈</span></div>
+  <div class="card-title">新舞臺藝術節：約恩．布爾熱瓦舞團《誰會跌倒》</div>
+  <div class="card-info"><div>11/20 週五 · 19:30</div><div class="card-venue">臺北表演藝術中心 球劇場</div></div>
+  <div class="card-go">查看資訊 →</div>
+</a><a class="card dark" href="https://www.opentix.life/program/2065059039769808896" target="_blank" rel="noopener noreferrer" data-region="北部" data-date="2026-11-20">
+  <div class="card-meta"><span>北部 / 台北</span><span>劇場</span></div>
+  <div class="card-title">沉浸式劇場《士林YES！》</div>
+  <div class="card-info"><div>11/20 週五 · 19:30</div><div class="card-venue">臺北表演藝術中心 藍盒子</div></div>
+  <div class="card-go">查看資訊 →</div>
+</a><a class="card light" href="https://www.opentix.life/program/2079395353170546689" target="_blank" rel="noopener noreferrer" data-region="中部" data-date="2026-11-20">
+  <div class="card-meta"><span>中部 / 台中</span><span>舞蹈</span></div>
+  <div class="card-title">NTT遇見巨人：莫蘇邦特跨界劇場《女巫安息日》</div>
+  <div class="card-info"><div>11/20 週五 · 19:30</div><div class="card-venue">臺中國家歌劇院 中劇院</div></div>
+  <div class="card-go">查看資訊 →</div>
+</a><a class="card dark" href="https://www.npac-weiwuying.org/programs/69c3988d1e6a9400071a7f78" target="_blank" rel="noopener noreferrer" data-region="南部" data-date="2026-11-20">
+  <div class="card-meta"><span>南部 / 高雄</span><span>劇場</span></div>
+  <div class="card-title">柏林雷寧廣場劇院《夢想清單》</div>
+  <div class="card-info"><div>11/20 週五 · 19:30</div><div class="card-venue">衛武營 戲劇院</div></div>
+  <div class="card-go">查看資訊 →</div>
+</a></div>
+</section><section class="day" data-date="2026-11-21">
+  <div class="day-head"><h3>11/21 週六</h3><span class="day-count"><span class="visible-n">20</span> 場次日</span></div>
+  <div class="grid"><a class="card light" href="https://www.npac-weiwuying.org/programs/69fae7b52404090007fc3925" target="_blank" rel="noopener noreferrer" data-region="南部" data-date="2026-11-21">
+  <div class="card-meta"><span>南部 / 高雄</span><span>音樂劇</span></div>
+  <div class="card-title">《再一次！唱歌旅行去》十週年親子演唱會</div>
+  <div class="card-info"><div>11/21 週六 · 10:30、15:00</div><div class="card-venue">衛武營 歌劇院</div></div>
+  <div class="card-go">查看資訊 →</div>
+</a><a class="card light" href="https://www.opentix.life/program/2065059039769808896" target="_blank" rel="noopener noreferrer" data-region="北部" data-date="2026-11-21">
+  <div class="card-meta"><span>北部 / 台北</span><span>劇場</span></div>
+  <div class="card-title">沉浸式劇場《士林YES！》</div>
+  <div class="card-info"><div>11/21 週六 · 12:30、18:00</div><div class="card-venue">臺北表演藝術中心 藍盒子</div></div>
+  <div class="card-go">查看資訊 →</div>
+</a><a class="card light" href="https://tpac.org.taipei/program/2051" target="_blank" rel="noopener noreferrer" data-region="北部" data-date="2026-11-21">
+  <div class="card-meta"><span>北部 / 台北</span><span>音樂劇</span></div>
+  <div class="card-title">倫敦全本音樂劇《史瑞克》</div>
+  <div class="card-info"><div>11/21 週六 · 13:30、18:30</div><div class="card-venue">臺北表演藝術中心 大劇院</div></div>
+  <div class="card-go">查看資訊 →</div>
+</a><a class="card dark" href="https://www.opentix.life/program/2076872118440620032" target="_blank" rel="noopener noreferrer" data-region="北部" data-date="2026-11-21">
+  <div class="card-meta"><span>北部 / 台北</span><span>戲曲</span></div>
+  <div class="card-title">于魁智、李勝素與中國戲曲學院名家匯演</div>
+  <div class="card-info"><div>11/21 週六 · 14:00</div><div class="card-venue">國家戲劇院</div></div>
+  <div class="card-go">查看資訊 →</div>
+</a><a class="card light" href="https://www.npac-weiwuying.org/programs/6a603fc2cdcdfe0008f604d9" target="_blank" rel="noopener noreferrer" data-region="南部" data-date="2026-11-21">
+  <div class="card-meta"><span>南部 / 高雄</span><span>古典</span></div>
+  <div class="card-title">鋼琴天后王羽佳與馬勒室內樂團</div>
+  <div class="card-info"><div>11/21 週六 · 14:00</div><div class="card-venue">衛武營 音樂廳</div></div>
+  <div class="card-go">查看資訊 →</div>
+</a><a class="card dark" href="https://www.opentix.life/program/2085664559789076480" target="_blank" rel="noopener noreferrer" data-region="北部" data-date="2026-11-21">
+  <div class="card-meta"><span>北部 / 台北</span><span>舞蹈</span></div>
+  <div class="card-title">新舞臺藝術節：約恩．布爾熱瓦舞團《誰會跌倒》</div>
+  <div class="card-info"><div>11/21 週六 · 14:30</div><div class="card-venue">臺北表演藝術中心 球劇場</div></div>
+  <div class="card-go">查看資訊 →</div>
+</a><a class="card light" href="https://www.opentix.life/program/2079395353170546689" target="_blank" rel="noopener noreferrer" data-region="中部" data-date="2026-11-21">
+  <div class="card-meta"><span>中部 / 台中</span><span>舞蹈</span></div>
+  <div class="card-title">NTT遇見巨人：莫蘇邦特跨界劇場《女巫安息日》</div>
+  <div class="card-info"><div>11/21 週六 · 14:30</div><div class="card-venue">臺中國家歌劇院 中劇院</div></div>
+  <div class="card-go">查看資訊 →</div>
+</a><a class="card dark" href="https://www.npac-ntt.org/program/events/c-p28rHIVhZmP" target="_blank" rel="noopener noreferrer" data-region="中部" data-date="2026-11-21">
+  <div class="card-meta"><span>中部 / 台中</span><span>劇場</span></div>
+  <div class="card-title">故事工廠《婚禮上的小抄》</div>
+  <div class="card-info"><div>11/21 週六 · 14:30</div><div class="card-venue">臺中國家歌劇院 大劇院</div></div>
+  <div class="card-go">查看資訊 →</div>
+</a><a class="card dark" href="https://www.npac-weiwuying.org/programs/69c3988d1e6a9400071a7f78" target="_blank" rel="noopener noreferrer" data-region="南部" data-date="2026-11-21">
+  <div class="card-meta"><span>南部 / 高雄</span><span>劇場</span></div>
+  <div class="card-title">柏林雷寧廣場劇院《夢想清單》</div>
+  <div class="card-info"><div>11/21 週六 · 14:30</div><div class="card-venue">衛武營 戲劇院</div></div>
+  <div class="card-go">查看資訊 →</div>
+</a><a class="card dark" href="https://www.opentix.life/event/2053719432722923520" target="_blank" rel="noopener noreferrer" data-region="南部" data-date="2026-11-21">
+  <div class="card-meta"><span>南部 / 台南</span><span>馬戲</span></div>
+  <div class="card-title">林懷民×幾米×FOCASA《幾米男孩的100次勇敢》</div>
+  <div class="card-info"><div>11/21 週六 · 14:30、19:30</div><div class="card-venue">臺南文化中心 演藝廳</div></div>
+  <div class="card-go">查看資訊 →</div>
+</a><a class="card light" href="https://www.kaoarena.com.tw/Home/CalendarDetail?id=241" target="_blank" rel="noopener noreferrer" data-region="南部" data-date="2026-11-21">
+  <div class="card-meta"><span>南部 / 高雄</span><span>演唱會</span></div>
+  <div class="card-title">彭佳慧《數著時間的日子》巡迴演唱會</div>
+  <div class="card-info"><div>11/21 週六 · 17:00</div><div class="card-venue">高雄巨蛋</div></div>
+  <div class="card-go">查看資訊 →</div>
+</a><a class="card dark" href="https://kktix.com/events/lot8iew" target="_blank" rel="noopener noreferrer" data-region="北部" data-date="2026-11-21">
+  <div class="card-meta"><span>北部 / 桃園</span><span>演唱會</span></div>
+  <div class="card-title">SUPER JUNIOR-83z FANCON TOUR [1983]</div>
+  <div class="card-info"><div>11/21 週六 · 18:00</div><div class="card-venue">桃園巨蛋</div></div>
+  <div class="card-go">查看資訊 →</div>
+</a><a class="card dark" href="https://kham.com.tw/application/UTK02/UTK0201_.aspx?PRODUCT_ID=P1F24HRG" target="_blank" rel="noopener noreferrer" data-region="南部" data-date="2026-11-21">
+  <div class="card-meta"><span>南部 / 高雄</span><span>演唱會</span></div>
+  <div class="card-title">N.Flying LIVE &#x27;&amp;CON5：into REM&#x27; 高雄</div>
+  <div class="card-info"><div>11/21 週六 · 18:00</div><div class="card-venue">高雄流行音樂中心 海音館</div></div>
+  <div class="card-go">查看資訊 →</div>
+</a><a class="card light" href="https://kktix.com/events/594b658b" target="_blank" rel="noopener noreferrer" data-region="北部" data-date="2026-11-21">
+  <div class="card-meta"><span>北部 / 桃園</span><span>演唱會</span></div>
+  <div class="card-title">JX 2026《CORE》台北演唱會</div>
+  <div class="card-info"><div>11/21 週六 · 19:00</div><div class="card-venue">林口體育館</div></div>
+  <div class="card-go">查看資訊 →</div>
+</a><a class="card dark" href="https://ticketplus.com.tw/activity/641abfeafd8760018e1f02fadcf3d4c0" target="_blank" rel="noopener noreferrer" data-region="北部" data-date="2026-11-21">
+  <div class="card-meta"><span>北部 / 新北</span><span>演唱會</span></div>
+  <div class="card-title">UVERworld LIVE TOUR 2026 in TAIPEI</div>
+  <div class="card-info"><div>11/21 週六 · 19:00</div><div class="card-venue">Zepp New Taipei</div></div>
+  <div class="card-go">查看資訊 →</div>
+</a><a class="card dark" href="https://tixcraft.com/activity/detail/26_btskns" target="_blank" rel="noopener noreferrer" data-region="南部" data-date="2026-11-21">
+  <div class="card-meta"><span>南部 / 高雄</span><span>演唱會</span></div>
+  <div class="card-title">BTS WORLD TOUR &#x27;ARIRANG&#x27; 高雄站</div>
+  <div class="card-info"><div>11/21 週六 · 19:00</div><div class="card-venue">高雄國家體育場（世運主場館）</div></div>
+  <div class="card-go">查看資訊 →</div>
+</a><a class="card dark" href="https://hualien.travel/zh-tw/event/1039/" target="_blank" rel="noopener noreferrer" data-region="東部" data-date="2026-11-21">
+  <div class="card-meta"><span>東部 / 花蓮</span><span>演唱會</span></div>
+  <div class="card-title">花蓮星潮原聲演唱會（李玖哲、品冠等，免費）</div>
+  <div class="card-info"><div>11/21 週六 · 19:00</div><div class="card-venue">東大門廣場</div></div>
+  <div class="card-go">查看資訊 →</div>
+</a><a class="card light" href="https://ticketplus.com.tw/activity/75a694bf61cb28f0e24835916cfae36e" target="_blank" rel="noopener noreferrer" data-region="北部" data-date="2026-11-21">
+  <div class="card-meta"><span>北部 / 台北</span><span>演唱會</span></div>
+  <div class="card-title">BABYMONSTER WORLD TOUR [CHOOM] IN TAIPEI</div>
+  <div class="card-info"><div>11/21 週六 · 19:30</div><div class="card-venue">臺北小巨蛋</div></div>
+  <div class="card-go">查看資訊 →</div>
+</a><a class="card light" href="https://www.opentix.life/program/2067154457490825217" target="_blank" rel="noopener noreferrer" data-region="中部" data-date="2026-11-21">
+  <div class="card-meta"><span>中部 / 台中</span><span>音樂劇</span></div>
+  <div class="card-title">音樂劇《潘朵拉的音樂盒》</div>
+  <div class="card-info"><div>11/21 週六 · 19:30</div><div class="card-venue">臺中國家歌劇院 小劇場</div></div>
+  <div class="card-go">查看資訊 →</div>
+</a><a class="card light" href="https://www.tainanoutlook.com/activities/1059440691" target="_blank" rel="noopener noreferrer" data-region="南部" data-date="2026-11-21">
+  <div class="card-meta"><span>南部 / 台南</span><span>音樂節</span></div>
+  <div class="card-title">南紡星空音樂節（免費）</div>
+  <div class="card-info"><div>11/21 週六 · 時間見連結</div><div class="card-venue">南紡購物中心 A2館南紡廣場</div></div>
+  <div class="card-go">查看資訊 →</div>
+</a></div>
+</section><section class="day" data-date="2026-11-22">
+  <div class="day-head"><h3>11/22 週日</h3><span class="day-count"><span class="visible-n">19</span> 場次日</span></div>
+  <div class="grid"><a class="card light" href="https://www.npac-weiwuying.org/programs/69fae7b52404090007fc3925" target="_blank" rel="noopener noreferrer" data-region="南部" data-date="2026-11-22">
+  <div class="card-meta"><span>南部 / 高雄</span><span>音樂劇</span></div>
+  <div class="card-title">《再一次！唱歌旅行去》十週年親子演唱會</div>
+  <div class="card-info"><div>11/22 週日 · 10:30</div><div class="card-venue">衛武營 歌劇院</div></div>
+  <div class="card-go">查看資訊 →</div>
+</a><a class="card dark" href="https://tpac.org.taipei/program/2051" target="_blank" rel="noopener noreferrer" data-region="北部" data-date="2026-11-22">
+  <div class="card-meta"><span>北部 / 台北</span><span>音樂劇</span></div>
+  <div class="card-title">倫敦全本音樂劇《史瑞克》</div>
+  <div class="card-info"><div>11/22 週日 · 11:00、16:00</div><div class="card-venue">臺北表演藝術中心 大劇院</div></div>
+  <div class="card-go">查看資訊 →</div>
+</a><a class="card dark" href="https://www.opentix.life/program/2065059039769808896" target="_blank" rel="noopener noreferrer" data-region="北部" data-date="2026-11-22">
+  <div class="card-meta"><span>北部 / 台北</span><span>劇場</span></div>
+  <div class="card-title">沉浸式劇場《士林YES！》</div>
+  <div class="card-info"><div>11/22 週日 · 12:30、18:00</div><div class="card-venue">臺北表演藝術中心 藍盒子</div></div>
+  <div class="card-go">查看資訊 →</div>
+</a><a class="card light" href="https://www.opentix.life/program/2076872118440620032" target="_blank" rel="noopener noreferrer" data-region="北部" data-date="2026-11-22">
+  <div class="card-meta"><span>北部 / 台北</span><span>戲曲</span></div>
+  <div class="card-title">于魁智、李勝素與中國戲曲學院名家匯演</div>
+  <div class="card-info"><div>11/22 週日 · 14:00</div><div class="card-venue">國家戲劇院</div></div>
+  <div class="card-go">查看資訊 →</div>
+</a><a class="card light" href="https://www.opentix.life/program/2085664559789076480" target="_blank" rel="noopener noreferrer" data-region="北部" data-date="2026-11-22">
+  <div class="card-meta"><span>北部 / 台北</span><span>舞蹈</span></div>
+  <div class="card-title">新舞臺藝術節：約恩．布爾熱瓦舞團《誰會跌倒》</div>
+  <div class="card-info"><div>11/22 週日 · 14:30</div><div class="card-venue">臺北表演藝術中心 球劇場</div></div>
+  <div class="card-go">查看資訊 →</div>
+</a><a class="card dark" href="https://www.opentix.life/program/2079395353170546689" target="_blank" rel="noopener noreferrer" data-region="中部" data-date="2026-11-22">
+  <div class="card-meta"><span>中部 / 台中</span><span>舞蹈</span></div>
+  <div class="card-title">NTT遇見巨人：莫蘇邦特跨界劇場《女巫安息日》</div>
+  <div class="card-info"><div>11/22 週日 · 14:30</div><div class="card-venue">臺中國家歌劇院 中劇院</div></div>
+  <div class="card-go">查看資訊 →</div>
+</a><a class="card light" href="https://www.npac-ntt.org/program/events/c-p28rHIVhZmP" target="_blank" rel="noopener noreferrer" data-region="中部" data-date="2026-11-22">
+  <div class="card-meta"><span>中部 / 台中</span><span>劇場</span></div>
+  <div class="card-title">故事工廠《婚禮上的小抄》</div>
+  <div class="card-info"><div>11/22 週日 · 14:30</div><div class="card-venue">臺中國家歌劇院 大劇院</div></div>
+  <div class="card-go">查看資訊 →</div>
+</a><a class="card dark" href="https://www.opentix.life/program/2067154457490825217" target="_blank" rel="noopener noreferrer" data-region="中部" data-date="2026-11-22">
+  <div class="card-meta"><span>中部 / 台中</span><span>音樂劇</span></div>
+  <div class="card-title">音樂劇《潘朵拉的音樂盒》</div>
+  <div class="card-info"><div>11/22 週日 · 14:30</div><div class="card-venue">臺中國家歌劇院 小劇場</div></div>
+  <div class="card-go">查看資訊 →</div>
+</a><a class="card dark" href="https://www.npac-weiwuying.org/programs/69c3988d1e6a9400071a7f78" target="_blank" rel="noopener noreferrer" data-region="南部" data-date="2026-11-22">
+  <div class="card-meta"><span>南部 / 高雄</span><span>劇場</span></div>
+  <div class="card-title">柏林雷寧廣場劇院《夢想清單》</div>
+  <div class="card-info"><div>11/22 週日 · 14:30</div><div class="card-venue">衛武營 戲劇院</div></div>
+  <div class="card-go">查看資訊 →</div>
+</a><a class="card light" href="https://www.opentix.life/event/2053719432722923520" target="_blank" rel="noopener noreferrer" data-region="南部" data-date="2026-11-22">
+  <div class="card-meta"><span>南部 / 台南</span><span>馬戲</span></div>
+  <div class="card-title">林懷民×幾米×FOCASA《幾米男孩的100次勇敢》</div>
+  <div class="card-info"><div>11/22 週日 · 14:30</div><div class="card-venue">臺南文化中心 演藝廳</div></div>
+  <div class="card-go">查看資訊 →</div>
+</a><a class="card dark" href="https://kktix.com/events/9f8586be" target="_blank" rel="noopener noreferrer" data-region="南部" data-date="2026-11-22">
+  <div class="card-meta"><span>南部 / 高雄</span><span>演唱會</span></div>
+  <div class="card-title">陳嫺靜《下次再見》東地球巡迴高雄空中場</div>
+  <div class="card-info"><div>11/22 週日 · 15:30、18:30</div><div class="card-venue">高雄大立空中樂園</div></div>
+  <div class="card-go">查看資訊 →</div>
+</a><a class="card dark" href="https://ticketplus.com.tw/activity/bbf0c5718f2239ac9b6d492874024f8e" target="_blank" rel="noopener noreferrer" data-region="北部" data-date="2026-11-22">
+  <div class="card-meta"><span>北部 / 台北</span><span>演唱會</span></div>
+  <div class="card-title">ONEWE 6th Live Concert《O! NEW E!volution VI》</div>
+  <div class="card-info"><div>11/22 週日 · 17:30</div><div class="card-venue">Legacy TERA</div></div>
+  <div class="card-go">查看資訊 →</div>
+</a><a class="card dark" href="https://ticketplus.com.tw/activity/75a694bf61cb28f0e24835916cfae36e" target="_blank" rel="noopener noreferrer" data-region="北部" data-date="2026-11-22">
+  <div class="card-meta"><span>北部 / 台北</span><span>演唱會</span></div>
+  <div class="card-title">BABYMONSTER WORLD TOUR [CHOOM] IN TAIPEI</div>
+  <div class="card-info"><div>11/22 週日 · 18:00</div><div class="card-venue">臺北小巨蛋</div></div>
+  <div class="card-go">查看資訊 →</div>
+</a><a class="card light" href="https://kktix.com/events/msdseg05" target="_blank" rel="noopener noreferrer" data-region="北部" data-date="2026-11-22">
+  <div class="card-meta"><span>北部 / 桃園</span><span>演唱會</span></div>
+  <div class="card-title">SUPER JUNIOR-83z FANCON TOUR [1983] 加場</div>
+  <div class="card-info"><div>11/22 週日 · 18:00</div><div class="card-venue">桃園巨蛋</div></div>
+  <div class="card-go">查看資訊 →</div>
+</a><a class="card light" href="https://www.goldenhorse.org.tw/awards/ceremony/info/" target="_blank" rel="noopener noreferrer" data-region="北部" data-date="2026-11-22">
+  <div class="card-meta"><span>北部 / 台北</span><span>典禮</span></div>
+  <div class="card-title">第63屆金馬獎頒獎典禮（星光大道 17:00）</div>
+  <div class="card-info"><div>11/22 週日 · 18:30</div><div class="card-venue">臺北流行音樂中心</div></div>
+  <div class="card-go">查看資訊 →</div>
+</a><a class="card light" href="https://tixcraft.com/activity/detail/26_btskns" target="_blank" rel="noopener noreferrer" data-region="南部" data-date="2026-11-22">
+  <div class="card-meta"><span>南部 / 高雄</span><span>演唱會</span></div>
+  <div class="card-title">BTS WORLD TOUR &#x27;ARIRANG&#x27; 高雄站</div>
+  <div class="card-info"><div>11/22 週日 · 19:00</div><div class="card-venue">高雄國家體育場（世運主場館）</div></div>
+  <div class="card-go">查看資訊 →</div>
+</a><a class="card light" href="https://hualien.travel/zh-tw/event/1039/" target="_blank" rel="noopener noreferrer" data-region="東部" data-date="2026-11-22">
+  <div class="card-meta"><span>東部 / 花蓮</span><span>演唱會</span></div>
+  <div class="card-title">花蓮星潮原聲演唱會（FTISLAND、金聖圭等，免費）</div>
+  <div class="card-info"><div>11/22 週日 · 19:00</div><div class="card-venue">東大門廣場</div></div>
+  <div class="card-go">查看資訊 →</div>
+</a><a class="card light" href="https://ticket.mna.com.tw/UTK0201_?PRODUCT_ID=P1FX0ASD" target="_blank" rel="noopener noreferrer" data-region="北部" data-date="2026-11-22">
+  <div class="card-meta"><span>北部 / 台北</span><span>古典</span></div>
+  <div class="card-title">鋼琴天后王羽佳與馬勒室內樂團</div>
+  <div class="card-info"><div>11/22 週日 · 20:00</div><div class="card-venue">國家音樂廳</div></div>
+  <div class="card-go">查看資訊 →</div>
+</a><a class="card dark" href="https://www.tainanoutlook.com/activities/1059440691" target="_blank" rel="noopener noreferrer" data-region="南部" data-date="2026-11-22">
+  <div class="card-meta"><span>南部 / 台南</span><span>音樂節</span></div>
+  <div class="card-title">南紡星空音樂節（免費）</div>
+  <div class="card-info"><div>11/22 週日 · 時間見連結</div><div class="card-venue">南紡購物中心 A2館南紡廣場</div></div>
+  <div class="card-go">查看資訊 →</div>
+</a></div>
+</section>
+
+    <section class="notes" aria-labelledby="notes-h">
+      <h2 id="notes-h">說明</h2>
+      <p>點整張卡片，於新分頁開啟該場官方節目頁或售票頁。場次按「場次日」計；同日多個開演時間合列。</p>
+      <p>南紡星空音樂節官方未公布鐘點，連結為台南意向活動整理頁；金馬獎為電視直播典禮，非售票演出。離島本週未見大型演出；小型 livehouse 場次未收錄。</p>
+    </section>
+  </main>
+  <script>
+    (function () {
+      var region = "全部";
+      var date = "全部";
+      function setOn(group, value) {
+        group.querySelectorAll(".pill").forEach(function (btn) {
+          var on = btn.getAttribute("data-value") === value;
+          btn.classList.toggle("is-on", on);
+          btn.setAttribute("aria-pressed", on ? "true" : "false");
+        });
+      }
+      function apply() {
+        var cards = document.querySelectorAll(".card");
+        var shown = 0;
+        cards.forEach(function (card) {
+          var okR = region === "全部" || card.getAttribute("data-region") === region;
+          var okD = date === "全部" || card.getAttribute("data-date") === date;
+          var ok = okR && okD;
+          card.classList.toggle("is-hidden", !ok);
+          if (ok) shown += 1;
+        });
+        document.querySelectorAll(".day").forEach(function (day) {
+          var n = day.querySelectorAll(".card:not(.is-hidden)").length;
+          day.classList.toggle("is-hidden", n === 0);
+          var el = day.querySelector(".visible-n");
+          if (el) el.textContent = n;
+        });
+        document.getElementById("empty").classList.toggle("show", shown === 0);
+      }
+      document.getElementById("region-filters").addEventListener("click", function (e) {
+        var btn = e.target.closest(".pill");
+        if (!btn) return;
+        region = btn.getAttribute("data-value");
+        setOn(this, region);
+        apply();
+      });
+      document.getElementById("date-filters").addEventListener("click", function (e) {
+        var btn = e.target.closest(".pill");
+        if (!btn) return;
+        date = btn.getAttribute("data-value");
+        setOn(this, date);
+        apply();
+      });
+    })();
+  </script>
+</body>
+</html>
